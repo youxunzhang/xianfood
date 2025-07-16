@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西安景点指南 - Xi'an Attractions Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>西安景点指南</h1>
+                    <span class="subtitle">Xi'an Attractions Guide</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">首页</a>
+                    <a href="#attractions" class="nav-link">景点</a>
+                    <a href="#about" class="nav-link">关于</a>
+                    <a href="#contact" class="nav-link">联系</a>
+                    <button class="language-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span id="lang-text">EN</span>
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-zh="探索古都西安的千年魅力" data-en="Discover the Ancient Charm of Xi'an">
+                探索古都西安的千年魅力
+            </h1>
+            <p class="hero-subtitle" data-zh="感受历史与现代的完美融合，体验中华文明的瑰宝" data-en="Experience the perfect blend of history and modernity, discover the treasures of Chinese civilization">
+                感受历史与现代的完美融合，体验中华文明的瑰宝
+            </p>
+            <a href="#attractions" class="cta-button" data-zh="开始探索" data-en="Start Exploring">
+                开始探索
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="西安城墙">
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <h2 class="section-title" data-zh="热门景点" data-en="Popular Attractions">
+                热门景点
+            </h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" data-zh="全部" data-en="All">全部</button>
+                <button class="filter-btn" data-filter="historical" data-zh="历史古迹" data-en="Historical">历史古迹</button>
+                <button class="filter-btn" data-filter="cultural" data-zh="文化景点" data-en="Cultural">文化景点</button>
+                <button class="filter-btn" data-filter="nature" data-zh="自然风光" data-en="Nature">自然风光</button>
+            </div>
+            
+            <div class="attractions-grid" id="attractionsGrid">
+                <!-- Attractions will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" data-zh="关于西安" data-en="About Xi'an">
+                        关于西安
+                    </h2>
+                    <p data-zh="西安，古称长安，是中华文明的重要发祥地之一，历史上曾有13个朝代在此建都。作为古丝绸之路的起点，西安承载着深厚的历史文化底蕴，是了解中国历史文化的绝佳窗口。" data-en="Xi'an, formerly known as Chang'an, is one of the important birthplaces of Chinese civilization, where 13 dynasties once established their capitals. As the starting point of the ancient Silk Road, Xi'an carries profound historical and cultural heritage, making it an excellent window to understand Chinese history and culture.">
+                        西安，古称长安，是中华文明的重要发祥地之一，历史上曾有13个朝代在此建都。作为古丝绸之路的起点，西安承载着深厚的历史文化底蕴，是了解中国历史文化的绝佳窗口。
+                    </p>
+                    <p data-zh="今天的西安既保留着深厚的历史文化底蕴，又展现出现代化都市的活力。无论是历史爱好者、文化探索者，还是美食爱好者，都能在西安找到属于自己的精彩。" data-en="Today's Xi'an retains its profound historical and cultural heritage while showcasing the vitality of a modern metropolis. Whether you're a history enthusiast, cultural explorer, or food lover, you'll find your own excitement in Xi'an.">
+                        今天的西安既保留着深厚的历史文化底蕴，又展现出现代化都市的活力。无论是历史爱好者、文化探索者，还是美食爱好者，都能在西安找到属于自己的精彩。
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>13</h3>
+                        <p data-zh="朝代建都" data-en="Dynasties">朝代建都</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3100+</h3>
+                        <p data-zh="年历史" data-en="Years">年历史</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p data-zh="文物古迹" data-en="Heritage Sites">文物古迹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-zh="联系我们" data-en="Contact Us">
+                联系我们
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-zh="邮箱" data-en="Email">邮箱</h3>
+                            <p>info@xian-attractions.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-zh="电话" data-en="Phone">电话</h3>
+                            <p>+86 29 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-zh="地址" data-en="Address">地址</h3>
+                            <p data-zh="陕西省西安市雁塔区" data-en="Yanta District, Xi'an, Shaanxi Province">
+                                陕西省西安市雁塔区
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" data-zh="姓名" data-en="Name">姓名</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" data-zh="邮箱" data-en="Email">邮箱</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" data-zh="留言" data-en="Message">留言</label>
+                        </div>
+                        <button type="submit" class="submit-btn" data-zh="发送消息" data-en="Send Message">
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-zh="西安景点指南" data-en="Xi'an Attractions Guide">西安景点指南</h3>
+                    <p data-zh="为您提供最全面的西安旅游信息" data-en="Providing you with the most comprehensive Xi'an travel information">
+                        为您提供最全面的西安旅游信息
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-zh="快速链接" data-en="Quick Links">快速链接</h3>
+                    <ul>
+                        <li><a href="#home" data-zh="首页" data-en="Home">首页</a></li>
+                        <li><a href="#attractions" data-zh="景点" data-en="Attractions">景点</a></li>
+                        <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
+                        <li><a href="#contact" data-zh="联系" data-en="Contact">联系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-zh="关注我们" data-en="Follow Us">关注我们</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-wechat"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 西安景点指南. <span data-zh="保留所有权利" data-en="All rights reserved">保留所有权利</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for attraction details -->
+    <div id="attractionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
