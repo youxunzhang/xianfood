@@ -15,7 +15,7 @@ const attractionsData = [
             zh: "世界第八大奇迹，秦始皇陵墓的陪葬坑，展示了数千个真人大小的陶俑，是了解秦朝历史的重要遗址。",
             en: "The Eighth Wonder of the World, the burial pits of Emperor Qin Shi Huang's mausoleum, featuring thousands of life-sized terracotta warriors, a crucial site for understanding Qin Dynasty history."
         },
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         rating: 4.9,
         price: {
             zh: "¥120",
@@ -95,7 +95,7 @@ const attractionsData = [
             zh: "唐代著名佛塔，玄奘法师为保存从印度取回的佛经而建，是佛教文化的象征。",
             en: "Famous Tang Dynasty pagoda built by Master Xuanzang to preserve Buddhist scriptures from India, a symbol of Buddhist culture."
         },
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1504674900240-9a9049b7d8ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         rating: 4.6,
         price: {
             zh: "¥50",
@@ -135,7 +135,7 @@ const attractionsData = [
             zh: "唐代皇家园林，以温泉闻名，是唐玄宗与杨贵妃的爱情故事发生地。",
             en: "Tang Dynasty royal garden famous for hot springs, where the love story of Emperor Xuanzong and Yang Guifei took place."
         },
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         rating: 4.5,
         price: {
             zh: "¥120",
@@ -175,7 +175,7 @@ const attractionsData = [
             zh: "西安著名的美食文化街区，汇集了各种清真美食和传统小吃，是体验西安美食文化的最佳地点。",
             en: "Famous food culture district in Xi'an, gathering various halal foods and traditional snacks, the best place to experience Xi'an's food culture."
         },
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         rating: 4.8,
         price: {
             zh: "免费",
@@ -215,7 +215,7 @@ const attractionsData = [
             zh: "五岳之一，以险峻著称，有'奇险天下第一山'的美誉，是登山爱好者的天堂。",
             en: "One of the Five Great Mountains, famous for its steepness, known as 'the most dangerous mountain in the world', a paradise for hikers."
         },
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         rating: 4.9,
         price: {
             zh: "¥180",

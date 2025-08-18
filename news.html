@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西安新闻 - Xi'an News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+
+        .news-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .news-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .news-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .search-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #d4af37;
+        }
+
+        .search-btn {
+            background: #d4af37;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background: #c19b2e;
+        }
+
+        .trending-topics {
+            margin-bottom: 50px;
+        }
+
+        .trending-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trending-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .trending-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .trending-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .trending-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .trending-title-small {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .trending-stats {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .trending-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .trending-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            background: none;
+            border: 1px solid #e9ecef;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #666;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .action-btn:hover {
+            background: #f8f9fa;
+            color: #d4af37;
+            border-color: #d4af37;
+        }
+
+        .news-articles {
+            margin-top: 60px;
+        }
+
+        .articles-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: #d4af37;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            background: #c19b2e;
+        }
+
+        @media (max-width: 768px) {
+            .news-title {
+                font-size: 2rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .trending-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-btn {
+                position: static;
+                margin-bottom: 20px;
+                display: inline-flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        返回首页
+    </a>
+
+    <div class="news-container">
+        <!-- News Header -->
+        <div class="news-header">
+            <h1 class="news-title">西安新闻</h1>
+            <p class="news-subtitle">Xi'an News - 最新资讯与热门话题</p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索西安相关新闻..." id="searchInput">
+                <button class="search-btn" onclick="searchNews()">
+                    <i class="fas fa-search"></i>
+                    搜索
+                </button>
+            </div>
+        </div>
+
+        <!-- Trending Topics -->
+        <div class="trending-topics">
+            <h2 class="trending-title">
+                <i class="fas fa-fire" style="color: #ff6b6b;"></i>
+                热门话题
+            </h2>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <div class="trending-header">
+                        <div>
+                            <h3 class="trending-title-small">Xian Foods Alexandria</h3>
+                            <div class="trending-stats">
+                                <span class="trending-badge">飙升</span>
+                                <span>搜索量上升</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" style="color: #999; cursor: pointer;"></i>
+                    </div>
+                    <p>西安美食在亚历山大港的受欢迎程度持续上升，当地居民对陕西菜系的兴趣激增。</p>
+                    <div class="trending-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-help-circle"></i>
+                            相关查询
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            下载
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            代码
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            分享
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-header">
+                        <div>
+                            <h3 class="trending-title-small">Huang Xian Fan</h3>
+                            <div class="trending-stats">
+                                <span class="trending-badge">飙升</span>
+                                <span>搜索量上升</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" style="color: #999; cursor: pointer;"></i>
+                    </div>
+                    <p>黄县粉丝成为网络热门话题，相关讨论和搜索量大幅增长。</p>
+                    <div class="trending-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-help-circle"></i>
+                            相关查询
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            下载
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            代码
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            分享
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-header">
+                        <div>
+                            <h3 class="trending-title-small">Xian Long Clothing</h3>
+                            <div class="trending-stats">
+                                <span class="trending-badge">飙升</span>
+                                <span>搜索量上升</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" style="color: #999; cursor: pointer;"></i>
+                    </div>
+                    <p>西安龙服装品牌受到广泛关注，时尚爱好者对其设计理念和产品质量给予高度评价。</p>
+                    <div class="trending-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-help-circle"></i>
+                            相关查询
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            下载
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            代码
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            分享
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-header">
+                        <div>
+                            <h3 class="trending-title-small">Xian Impressions London</h3>
+                            <div class="trending-stats">
+                                <span class="trending-badge">飙升</span>
+                                <span>搜索量上升</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" style="color: #999; cursor: pointer;"></i>
+                    </div>
+                    <p>西安印象伦敦展获得巨大成功，向英国观众展示了西安的深厚文化底蕴和现代发展成就。</p>
+                    <div class="trending-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-help-circle"></i>
+                            相关查询
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            下载
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            代码
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            分享
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-header">
+                        <div>
+                            <h3 class="trending-title-small">Master Wei Xian</h3>
+                            <div class="trending-stats">
+                                <span class="trending-badge">热门</span>
+                                <span>持续关注</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-v" style="color: #999; cursor: pointer;"></i>
+                    </div>
+                    <p>魏师傅西安面馆成为网红打卡地，其传统手工拉面技艺和独特口味吸引了众多食客。</p>
+                    <div class="trending-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-help-circle"></i>
+                            相关查询
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            下载
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-code"></i>
+                            代码
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            分享
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Articles -->
+        <div class="news-articles">
+            <h2 class="articles-title">最新文章</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="西安美食" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">西安美食文化走向世界：从亚历山大港到伦敦</h3>
+                        <p class="article-excerpt">随着"一带一路"倡议的推进，西安美食文化正在全球范围内获得越来越多的关注和认可...</p>
+                        <div class="article-meta">
+                            <span>2024年1月15日</span>
+                            <span>阅读量: 2,847</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="西安服装" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">西安龙服装：传统与现代的完美融合</h3>
+                        <p class="article-excerpt">西安龙服装品牌以其独特的设计理念和精湛的工艺技术，在时尚界掀起了一股新的潮流...</p>
+                        <div class="article-meta">
+                            <span>2024年1月14日</span>
+                            <span>阅读量: 1,923</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1504674900240-9a9049b7d8ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="西安印象" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">西安印象伦敦展：让世界了解古都魅力</h3>
+                        <p class="article-excerpt">在伦敦举办的西安印象展成功吸引了超过10万名参观者，向世界展示了西安的历史文化魅力...</p>
+                        <div class="article-meta">
+                            <span>2024年1月13日</span>
+                            <span>阅读量: 3,156</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="魏师傅面馆" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">魏师傅西安面馆：传承百年的手工拉面技艺</h3>
+                        <p class="article-excerpt">魏师傅西安面馆以其精湛的手工拉面技艺和独特的口味配方，成为西安美食文化的代表...</p>
+                        <div class="article-meta">
+                            <span>2024年1月12日</span>
+                            <span>阅读量: 4,231</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="黄县粉丝" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">黄县粉丝：从传统小吃到网络爆款</h3>
+                        <p class="article-excerpt">黄县粉丝凭借其独特的口感和营养价值，在社交媒体上迅速走红，成为新一代网红美食...</p>
+                        <div class="article-meta">
+                            <span>2024年1月11日</span>
+                            <span>阅读量: 1,756</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="西安发展" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-title">西安城市发展新篇章：科技与文化的完美结合</h3>
+                        <p class="article-excerpt">西安正在经历前所未有的发展机遇，科技创新与文化传承的完美结合为城市注入了新的活力...</p>
+                        <div class="article-meta">
+                            <span>2024年1月10日</span>
+                            <span>阅读量: 2,943</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">联系我们</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fab fa-weixin"></i>
+                    <h3>微信</h3>
+                    <p>zhangyouxun2013</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>邮箱</h3>
+                    <p>zhangyouxun2024@qq.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>电话</h3>
+                    <p>86-15000273517</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .contact-section {
+            margin-top: 80px;
+            padding: 60px 0;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .contact-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function searchNews() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                alert(`搜索: ${query}\n功能开发中，敬请期待！`);
+            } else {
+                alert('请输入搜索关键词');
+            }
+        }
+
+        // 回车键搜索
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchNews();
+            }
+        });
+
+        // 为所有操作按钮添加点击事件
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const action = this.textContent.trim();
+                alert(`${action} 功能开发中，敬请期待！`);
+            });
+        });
+    </script>
+</body>
+</html>
