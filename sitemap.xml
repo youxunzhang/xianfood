@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- 主页 -->
+    <url>
+        <loc>https://yourdomain.com/</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/?lang=en" />
+    </url>
+    
+    <!-- 新闻页面 -->
+    <url>
+        <loc>https://yourdomain.com/news.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/news.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/news.html?lang=en" />
+    </url>
+    
+    <!-- 景点详情页面 -->
+    <url>
+        <loc>https://yourdomain.com/attractions.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 美食页面 -->
+    <url>
+        <loc>https://yourdomain.com/food.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- 关于页面 -->
+    <url>
+        <loc>https://yourdomain.com/about.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- 联系页面 -->
+    <url>
+        <loc>https://yourdomain.com/contact.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+</urlset>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 西安景点指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .error-content {
+            max-width: 600px;
+            padding: 40px;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-btn {
+            background: #d4af37;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .error-btn:hover {
+            background: #c19b2e;
+        }
+        
+        .error-btn.secondary {
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+        }
+        
+        .error-btn.secondary:hover {
+            background: #d4af37;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">页面未找到</h1>
+            <p class="error-message">
+                抱歉，您访问的页面不存在或已被移动。<br>
+                请检查网址是否正确，或返回首页继续浏览。
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="error-btn">
+                    <i class="fas fa-home"></i>
+                    返回首页
+                </a>
+                <a href="food.html" class="error-btn secondary">
+                    <i class="fas fa-utensils"></i>
+                    美食攻略
+                </a>
+                <a href="news.html" class="error-btn secondary">
+                    <i class="fas fa-newspaper"></i>
+                    最新新闻
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站地图 - 西安景点指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        
+        .sitemap-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .sitemap-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+        
+        .sitemap-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .sitemap-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .sitemap-section h2 {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .sitemap-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sitemap-links li {
+            margin-bottom: 10px;
+        }
+        
+        .sitemap-links a {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+        
+        .sitemap-links a:hover {
+            color: #d4af37;
+        }
+        
+        .sitemap-links i {
+            color: #d4af37;
+            width: 20px;
+        }
+        
+        .back-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .back-home a {
+            background: #d4af37;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .back-home a:hover {
+            background: #c19b2e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>西安景点指南</h1>
+                    <span class="subtitle">Xi'an Attractions Guide</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="index.html#attractions" class="nav-link">景点</a>
+                    <a href="food.html" class="nav-link">美食</a>
+                    <a href="news.html" class="nav-link">新闻</a>
+                    <a href="index.html#about" class="nav-link">关于</a>
+                    <a href="index.html#contact" class="nav-link">联系</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sitemap-container">
+        <div class="sitemap-header">
+            <h1 class="sitemap-title">网站地图</h1>
+            <p class="sitemap-subtitle">快速导航到网站的所有页面</p>
+        </div>
+
+        <div class="sitemap-grid">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> 主要页面</h2>
+                <ul class="sitemap-links">
+                    <li><a href="index.html"><i class="fas fa-angle-right"></i>首页</a></li>
+                    <li><a href="food.html"><i class="fas fa-angle-right"></i>西安美食攻略</a></li>
+                    <li><a href="news.html"><i class="fas fa-angle-right"></i>西安新闻</a></li>
+                    <li><a href="sitemap.html"><i class="fas fa-angle-right"></i>网站地图</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2><i class="fas fa-map-marker-alt"></i> 景点信息</h2>
+                <ul class="sitemap-links">
+                    <li><a href="index.html#attractions"><i class="fas fa-angle-right"></i>热门景点</a></li>
+                    <li><a href="index.html#attractions"><i class="fas fa-angle-right"></i>历史古迹</a></li>
+                    <li><a href="index.html#attractions"><i class="fas fa-angle-right"></i>文化景点</a></li>
+                    <li><a href="index.html#attractions"><i class="fas fa-angle-right"></i>自然风光</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2><i class="fas fa-utensils"></i> 美食分类</h2>
+                <ul class="sitemap-links">
+                    <li><a href="food.html"><i class="fas fa-angle-right"></i>传统小吃</a></li>
+                    <li><a href="food.html"><i class="fas fa-angle-right"></i>面食类</a></li>
+                    <li><a href="food.html"><i class="fas fa-angle-right"></i>特色菜品</a></li>
+                    <li><a href="food.html"><i class="fas fa-angle-right"></i>美食街区</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> 关于我们</h2>
+                <ul class="sitemap-links">
+                    <li><a href="index.html#about"><i class="fas fa-angle-right"></i>关于西安</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-angle-right"></i>联系我们</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-angle-right"></i>微信: zhangyouxun2013</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-angle-right"></i>邮箱: zhangyouxun2024@qq.com</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2><i class="fas fa-fire"></i> 热门话题</h2>
+                <ul class="sitemap-links">
+                    <li><a href="news.html"><i class="fas fa-angle-right"></i>Xian Foods Alexandria</a></li>
+                    <li><a href="news.html"><i class="fas fa-angle-right"></i>Huang Xian Fan</a></li>
+                    <li><a href="news.html"><i class="fas fa-angle-right"></i>Xian Long Clothing</a></li>
+                    <li><a href="news.html"><i class="fas fa-angle-right"></i>Xian Impressions London</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> 实用工具</h2>
+                <ul class="sitemap-links">
+                    <li><a href="sitemap.xml"><i class="fas fa-angle-right"></i>XML网站地图</a></li>
+                    <li><a href="robots.txt"><i class="fas fa-angle-right"></i>Robots.txt</a></li>
+                    <li><a href="404.html"><i class="fas fa-angle-right"></i>404错误页面</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-angle-right"></i>联系表单</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                返回首页
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>西安景点指南</h3>
+                    <p>为您提供最全面的西安旅游信息和美食攻略</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#attractions">景点</a></li>
+                        <li><a href="food.html">美食</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="index.html#about">关于</a></li>
+                        <li><a href="index.html#contact">联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 西安景点指南. 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
