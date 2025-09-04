@@ -22,20 +22,32 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/news.html?lang=en" />
     </url>
     
-    <!-- 景点详情页面 -->
-    <url>
-        <loc>https://yourdomain.com/attractions.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
     <!-- 美食页面 -->
     <url>
         <loc>https://yourdomain.com/food.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/food.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/food.html?lang=en" />
+    </url>
+    
+    <!-- 美食清单页面 -->
+    <url>
+        <loc>https://yourdomain.com/xian-food-list.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/xian-food-list.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/xian-food-list.html?lang=en" />
+    </url>
+    
+    <!-- 景点详情页面 -->
+    <url>
+        <loc>https://yourdomain.com/attractions.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <!-- 关于页面 -->
@@ -52,6 +64,22 @@
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+    </url>
+    
+    <!-- 网站地图页面 -->
+    <url>
+        <loc>https://yourdomain.com/sitemap.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <!-- 404错误页面 -->
+    <url>
+        <loc>https://yourdomain.com/404.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
     </url>
     
 </urlset>
