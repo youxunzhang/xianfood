@@ -3,104 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面未找到 - 西安景点指南</title>
+    <title>页面未找到 - 西安美味指南</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .error-container {
+        body {
+            background: linear-gradient(135deg, #fff5ec 0%, #ffe3d0 100%);
+        }
+        .error-wrapper {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 20px;
         }
-        
-        .error-content {
-            max-width: 600px;
-            padding: 40px;
+        .error-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 48px;
+            border-radius: 28px;
+            box-shadow: 0 30px 60px rgba(178, 38, 29, 0.12);
+            max-width: 520px;
         }
-        
         .error-code {
-            font-size: 8rem;
-            font-weight: 700;
-            color: #d4af37;
-            margin-bottom: 20px;
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 16px;
         }
-        
         .error-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: var(--color-dark);
+            margin-bottom: 12px;
         }
-        
-        .error-message {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        .error-text {
+            color: var(--color-muted);
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
-        
         .error-actions {
             display: flex;
-            gap: 15px;
-            justify-content: center;
             flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
         }
-        
-        .error-btn {
-            background: #d4af37;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
+        .error-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 999px;
             font-weight: 600;
-            transition: background 0.3s ease;
+            text-decoration: none;
         }
-        
-        .error-btn:hover {
-            background: #c19b2e;
+        .error-actions a.primary {
+            background: linear-gradient(135deg, var(--color-primary), #da4b28);
+            color: #fff;
+            box-shadow: 0 18px 35px rgba(178, 38, 29, 0.18);
         }
-        
-        .error-btn.secondary {
-            background: transparent;
-            color: #d4af37;
-            border: 2px solid #d4af37;
-        }
-        
-        .error-btn.secondary:hover {
-            background: #d4af37;
-            color: white;
+        .error-actions a.secondary {
+            border: 2px solid rgba(178, 38, 29, 0.25);
+            color: var(--color-primary);
         }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <div class="error-content">
+    <div class="error-wrapper">
+        <div class="error-card">
             <div class="error-code">404</div>
-            <h1 class="error-title">页面未找到</h1>
-            <p class="error-message">
-                抱歉，您访问的页面不存在或已被移动。<br>
-                请检查网址是否正确，或返回首页继续浏览。
-            </p>
+            <h1 class="error-title">这一页被辣子藏起来了</h1>
+            <p class="error-text">抱歉，你访问的内容暂时无法找到。别担心，西安的美味从不会走远，返回首页或者直接进入美食大全继续探索吧。</p>
             <div class="error-actions">
-                <a href="index.html" class="error-btn">
-                    <i class="fas fa-home"></i>
-                    返回首页
-                </a>
-                <a href="food.html" class="error-btn secondary">
-                    <i class="fas fa-utensils"></i>
-                    美食攻略
-                </a>
-                <a href="news.html" class="error-btn secondary">
-                    <i class="fas fa-newspaper"></i>
-                    最新新闻
-                </a>
+                <a class="primary" href="index.html"><i class="fa-solid fa-house"></i> 回到首页</a>
+                <a class="secondary" href="food.html"><i class="fa-solid fa-utensils"></i> 查看美食大全</a>
+                <a class="secondary" href="index.html#contact"><i class="fa-solid fa-envelope"></i> 联系我们</a>
             </div>
         </div>
     </div>
 </body>
 </html>
-
