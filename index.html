@@ -1,264 +1,301 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXH17REJKN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CXH17REJKN');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>西安景点指南 - 兵马俑、城墙、大雁塔等热门景点攻略 | Xi'an Attractions Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="探索西安热门景点：兵马俑博物馆、西安城墙、大雁塔、华清宫、回民街、华山等。提供详细攻略、门票价格、开放时间、交通指南。">
-    <meta name="keywords" content="西安景点,兵马俑,西安城墙,大雁塔,华清宫,回民街,华山,西安旅游,西安攻略">
-    <meta name="author" content="西安景点指南">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourdomain.com/">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="西安景点指南 - 兵马俑、城墙、大雁塔等热门景点攻略">
-    <meta property="og:description" content="探索西安热门景点：兵马俑博物馆、西安城墙、大雁塔、华清宫、回民街、华山等。提供详细攻略、门票价格、开放时间。">
-    <meta property="og:image" content="https://yourdomain.com/images/xian-attractions-og.jpg">
-    <meta property="og:url" content="https://yourdomain.com/">
+    <title>西安美味指南 - 探索肉夹馍、羊肉泡馍、biangbiang面等地道美食 | Xi'an Culinary Guide</title>
+    <meta name="description" content="重构后的西安美味指南带你深入古城味蕾：肉夹馍、羊肉泡馍、biangbiang面、凉皮、葫芦鸡等经典美食，以及夜市小吃、巷子老店和美食路线推荐。">
+    <meta name="keywords" content="西安美食,肉夹馍,羊肉泡馍,biangbiang面,凉皮,回民街,永兴坊,西安美食攻略,西安夜市,西安老字号">
+    <meta name="author" content="西安美味指南">
+    <meta property="og:title" content="西安美味指南 - 探索地道陕西味">
+    <meta property="og:description" content="跟随西安美味指南，解锁肉夹馍、羊肉泡馍、biangbiang面、凉皮等地道西安风味，规划属于你的美食旅程。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="西安景点指南 - 兵马俑、城墙、大雁塔等热门景点攻略">
-    <meta name="twitter:description" content="探索西安热门景点：兵马俑博物馆、西安城墙、大雁塔、华清宫、回民街、华山等。">
-    <meta name="twitter:image" content="https://yourdomain.com/images/xian-attractions-twitter.jpg">
-    
-    <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/">
-    <link rel="alternate" hreflang="en" href="https://yourdomain.com/?lang=en">
-    <link rel="alternate" hreflang="x-default" href="https://yourdomain.com/">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "西安景点指南",
-        "description": "探索西安热门景点：兵马俑博物馆、西安城墙、大雁塔、华清宫、回民街、华山等。",
-        "url": "https://yourdomain.com/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://yourdomain.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1>西安景点指南</h1>
-                    <span class="subtitle">Xi'an Attractions Guide</span>
-                </div>
-                <div class="nav-menu">
-                    <a href="#home" class="nav-link">首页</a>
-                    <a href="#attractions" class="nav-link">景点</a>
-                    <a href="food.html" class="nav-link">美食</a>
-                    <a href="news.html" class="nav-link">新闻</a>
-                    <a href="#about" class="nav-link">关于</a>
-                    <a href="#contact" class="nav-link">联系</a>
-                    <button class="language-toggle" onclick="toggleLanguage()">
-                        <i class="fas fa-globe"></i>
-                        <span id="lang-text">EN</span>
-                    </button>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+    <header class="site-header" id="top">
+        <div class="container nav-bar">
+            <a class="brand" href="index.html">
+                <span class="logo-title">西安美味指南</span>
+                <span class="logo-subtitle">Xi'an Culinary Journey</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">展开导航</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="primary-navigation">
+                <a href="#signature">必吃推荐</a>
+                <a href="#routes">美食路线</a>
+                <a href="#markets">夜市小吃</a>
+                <a href="food.html">西安美食大全</a>
+                <a href="news.html">美食快讯</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title" data-zh="探索古都西安的千年魅力" data-en="Discover the Ancient Charm of Xi'an">
-                探索古都西安的千年魅力
-            </h1>
-            <p class="hero-subtitle" data-zh="感受历史与现代的完美融合，体验中华文明的瑰宝" data-en="Experience the perfect blend of history and modernity, discover the treasures of Chinese civilization">
-                感受历史与现代的完美融合，体验中华文明的瑰宝
-            </p>
-            <a href="#attractions" class="cta-button" data-zh="开始探索" data-en="Start Exploring">
-                开始探索
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="西安城墙夜景，古都西安的标志性建筑" loading="lazy">
-        </div>
-    </section>
-
-    <!-- Attractions Section -->
-    <section id="attractions" class="attractions">
-        <div class="container">
-            <h2 class="section-title" data-zh="热门景点" data-en="Popular Attractions">
-                热门景点
-            </h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all" data-zh="全部" data-en="All">全部</button>
-                <button class="filter-btn" data-filter="historical" data-zh="历史古迹" data-en="Historical">历史古迹</button>
-                <button class="filter-btn" data-filter="cultural" data-zh="文化景点" data-en="Cultural">文化景点</button>
-                <button class="filter-btn" data-filter="nature" data-zh="自然风光" data-en="Nature">自然风光</button>
-            </div>
-            
-            <div class="attractions-grid" id="attractionsGrid">
-                <!-- Attractions will be loaded here by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title" data-zh="关于西安" data-en="About Xi'an">
-                        关于西安
-                    </h2>
-                    <p data-zh="西安，古称长安，是中华文明的重要发祥地之一，历史上曾有13个朝代在此建都。作为古丝绸之路的起点，西安承载着深厚的历史文化底蕴，是了解中国历史文化的绝佳窗口。" data-en="Xi'an, formerly known as Chang'an, is one of the important birthplaces of Chinese civilization, where 13 dynasties once established their capitals. As the starting point of the ancient Silk Road, Xi'an carries profound historical and cultural heritage, making it an excellent window to understand Chinese history and culture.">
-                        西安，古称长安，是中华文明的重要发祥地之一，历史上曾有13个朝代在此建都。作为古丝绸之路的起点，西安承载着深厚的历史文化底蕴，是了解中国历史文化的绝佳窗口。
-                    </p>
-                    <p data-zh="今天的西安既保留着深厚的历史文化底蕴，又展现出现代化都市的活力。无论是历史爱好者、文化探索者，还是美食爱好者，都能在西安找到属于自己的精彩。" data-en="Today's Xi'an retains its profound historical and cultural heritage while showcasing the vitality of a modern metropolis. Whether you're a history enthusiast, cultural explorer, or food lover, you'll find your own excitement in Xi'an.">
-                        今天的西安既保留着深厚的历史文化底蕴，又展现出现代化都市的活力。无论是历史爱好者、文化探索者，还是美食爱好者，都能在西安找到属于自己的精彩。
-                    </p>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content" data-animate>
+                    <span class="hero-badge"><i class="fa-solid fa-bowl-food"></i> 一口征服味蕾的西安</span>
+                    <h1 class="hero-title">西安味道，唤醒所有味蕾</h1>
+                    <p class="hero-text">从老字号的秘制肉夹馍，到巷子里炖得浓郁的羊肉泡馍，再到夜幕里热辣翻滚的胡辣汤，这座千年古城把故事写进了每一道菜里。我们为你重新梳理西安的美食地图，让旅程从味蕾出发。</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="food.html"><i class="fa-solid fa-compass"></i> 开始美味之旅</a>
+                        <a class="btn-outline" href="#signature"><i class="fa-solid fa-list"></i> 查看必吃清单</a>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>13</h3>
-                        <p data-zh="朝代建都" data-en="Dynasties">朝代建都</p>
+                <div class="hero-visual" data-animate>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?auto=format&fit=crop&w=1400&q=80" alt="西安城中古朴餐桌上的热气腾腾美食">
                     </div>
-                    <div class="stat-item">
-                        <h3>3100+</h3>
-                        <p data-zh="年历史" data-en="Years">年历史</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>1000+</h3>
-                        <p data-zh="文物古迹" data-en="Heritage Sites">文物古迹</p>
+                    <div class="hero-stats">
+                        <div class="stat-card" data-animate>
+                            <div class="stat-number">48h</div>
+                            <p>两天一夜畅吃计划，覆盖老城经典与新派创意。</p>
+                        </div>
+                        <div class="stat-card" data-animate>
+                            <div class="stat-number">70+</div>
+                            <p>精选老字号与人气小馆，真实口碑带路。</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-zh="联系我们" data-en="Contact Us">
-                联系我们
-            </h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fab fa-weixin"></i>
-                        <div>
-                            <h3 data-zh="微信" data-en="WeChat">微信</h3>
-                            <p>zhangyouxun2013</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3 data-zh="邮箱" data-en="Email">邮箱</h3>
-                            <p>zhangyouxun2024@qq.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3 data-zh="电话" data-en="Phone">电话</h3>
-                            <p>86-15000273517</p>
-                        </div>
-                    </div>
+        <section id="signature" class="section">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <span class="section-eyebrow">Signature Dishes</span>
+                    <h2 class="section-title">初到西安就要吃的六道风味</h2>
+                    <p class="section-intro">我们重新梳理了最具代表性的西安味道，不仅告诉你吃什么，更告诉你去哪吃、怎么点，确保每一口都值得。</p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name" data-zh="姓名" data-en="Name">姓名</label>
+                <div class="grid grid-3">
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="酥香肉夹馍">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">老字号</span>
+                                <span class="tag">回坊精选</span>
+                            </div>
+                            <h3>肉夹馍</h3>
+                            <p>外脆内软的白吉馍夹入秘制腊汁肉，肥瘦相间、汤汁饱满。一口咬下去，瞬间理解“肉夹馍自由”。</p>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email" data-zh="邮箱" data-en="Email">邮箱</label>
+                    </article>
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="羊肉泡馍">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">老城记忆</span>
+                                <span class="tag">慢火熬煮</span>
+                            </div>
+                            <h3>羊肉泡馍</h3>
+                            <p>手撕馍块浸入久熬的羊汤，搭配嫩滑羊肉与糖蒜、辣子，汤浓味醇，是冬日最暖的慰藉。</p>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message" data-zh="留言" data-en="Message">留言</label>
+                    </article>
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=900&q=80" alt="biangbiang面">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">擀如腰带</span>
+                                <span class="tag">香辣过瘾</span>
+                            </div>
+                            <h3>BiangBiang面</h3>
+                            <p>面宽如带，浇上葱油、辣子和油泼肉臊子，香味在热气里翻滚，口感筋道弹牙。</p>
                         </div>
-                        <button type="submit" class="submit-btn" data-zh="发送消息" data-en="Send Message">
-                            发送消息
-                        </button>
-                    </form>
+                    </article>
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1504674900240-9a9049b7d8ce?auto=format&fit=crop&w=900&q=80" alt="凉皮">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">清爽开胃</span>
+                                <span class="tag">街头人气</span>
+                            </div>
+                            <h3>擀面皮/米皮</h3>
+                            <p>筋道的皮配上蒜香辣油、芝麻酱和黄瓜丝，酸辣交织，是夏日消暑的心头好。</p>
+                        </div>
+                    </article>
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?auto=format&fit=crop&w=900&q=80" alt="灌汤包">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">现蒸现卖</span>
+                                <span class="tag">爆汁小笼</span>
+                            </div>
+                            <h3>灌汤包</h3>
+                            <p>皮薄馅足，轻轻咬开先吸汤，再蘸醋配姜丝，感受汤汁在口腔中绽放的瞬间。</p>
+                        </div>
+                    </article>
+                    <article class="card food-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=900&q=80" alt="西安甑糕甜点">
+                        <div class="card-content">
+                            <div class="tag-list">
+                                <span class="tag">甜蜜收尾</span>
+                                <span class="tag">街头糕点</span>
+                            </div>
+                            <h3>甑糕 · 镜糕</h3>
+                            <p>糯米与红枣蒸出的绵密甑糕，搭配现场现烙的镜糕，甜而不腻，是散步时的幸福仪式感。</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="routes" class="section" style="background: var(--color-surface-strong);">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <span class="section-eyebrow">Curated Routes</span>
+                    <h2 class="section-title">三条美食路线，吃出西安的一天</h2>
+                    <p class="section-intro">根据不同旅程节奏，我们为你设计了从早餐到夜宵的完整动线，真正体验西安人的吃饭方式。</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card story-card" data-animate>
+                        <h3>老城慢活 · 回坊寻味</h3>
+                        <p><strong>早餐：</strong>北广济街镜糕 + 马家粉汤羊血<br><strong>午餐：</strong>樊记腊汁肉夹馍 + 老米家泡馍<br><strong>下午茶：</strong>定家小酥肉 + 桂花稠酒<br><strong>夜宵：</strong>柳巷胡辣汤 + 炸糊辣子。</p>
+                    </article>
+                    <article class="card story-card" data-animate>
+                        <h3>文艺新派 · 城南烟火</h3>
+                        <p><strong>早餐：</strong>兴善寺街豆花泡馍<br><strong>午餐：</strong>大唐不夜城创意面馆<br><strong>下午茶：</strong>曲江书店咖啡配甑糕<br><strong>夜宵：</strong>永宁门下烧烤摊 + 精酿。</p>
+                    </article>
+                    <article class="card story-card" data-animate>
+                        <h3>深夜食堂 · 夜市狂欢</h3>
+                        <p><strong>傍晚：</strong>永兴坊小吃广场集合<br><strong>夜宵：</strong>建东街铁板鱿鱼、biangbiang面<br><strong>加餐：</strong>洒金桥牛肉串 + 烧烤小龙虾<br><strong>收官：</strong>粉巷酸奶解腻。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="markets" class="section">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <span class="section-eyebrow">Night Markets</span>
+                    <h2 class="section-title">夜幕降临，跟着烟火去吃</h2>
+                    <p class="section-intro">夜市是认识西安最直接的方式，从回民街到建东街，每条巷子都藏着一个城市的胃口。</p>
+                </div>
+                <div class="market-grid">
+                    <article class="market-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" alt="回民街夜市灯光">
+                        <div class="market-info">
+                            <h3>回民街 · 老字号集散地</h3>
+                            <p>晚餐后漫步北院门，糖油粑粑、绿豆糕、烤牛肉串错落其间，记得在广济街品一碗酸梅汤降温。</p>
+                        </div>
+                    </article>
+                    <article class="market-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1524858458755-3c1c5abc6c50?auto=format&fit=crop&w=1200&q=80" alt="建东街夜市炙烤美食">
+                        <div class="market-info">
+                            <h3>建东街 · 深夜排档</h3>
+                            <p>开到凌晨的烧烤一条街，铁板鱿鱼、烤肥瘦、花甲粉应有尽有，啤酒配辣子才是正确打开方式。</p>
+                        </div>
+                    </article>
+                    <article class="market-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="永兴坊小吃广场">
+                        <div class="market-info">
+                            <h3>永兴坊 · 陕西味道名片</h3>
+                            <p>集合全省特色的小吃主题街区，手工搅团、岐山臊子面、潼关肉夹馍一站式尝遍。</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="cta-panel" data-animate>
+                    <h3>想把西安吃个遍？</h3>
+                    <p>我们整理了超过三十种经典与隐藏版小吃，附上推荐店铺、排队攻略和最佳食用时段。收藏这份指南，下一站就出发。</p>
+                    <a class="btn-primary" href="food.html"><i class="fa-solid fa-utensils"></i> 打开西安美食大全</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="section" style="background: var(--color-surface-strong);">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <span class="section-eyebrow">Culinary Stories</span>
+                    <h2 class="section-title">在味道里认识这座城</h2>
+                    <p class="section-intro">西安的美味从不是单纯的食物，它关联着巷子、手艺和人情。我们记录下这些故事，帮你在味觉之外收获情感。</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card story-card" data-animate>
+                        <h3>清晨的馍摊</h3>
+                        <p><strong>南院门老张家</strong>凌晨四点开始醒面，手掌按压、炉火烘烤，出炉后一刀划开塞满肉臊子，忙碌却温柔。</p>
+                    </article>
+                    <article class="card story-card" data-animate>
+                        <h3>一碗汤的八小时</h3>
+                        <p><strong>老刘家羊汤</strong>用羊骨慢火熬八小时，只为熬出乳白色的浓汤，最后一勺胡椒粉是师傅亲手点睛。</p>
+                    </article>
+                    <article class="card story-card" data-animate>
+                        <h3>辣子铺的秘密</h3>
+                        <p><strong>洒金桥李记</strong>每天现炒新辣子，添加自家炒制的花椒油。香味从巷子口飘进来，是让人流连的原因。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <span class="section-eyebrow">Stay Connected</span>
+                    <h2 class="section-title">联系我们 · 获取最新美食活动</h2>
+                    <p class="section-intro">我们会定期更新限量菜品、城市餐桌活动与夜市开档提醒。留下联系方式，不错过任何一口惊喜。</p>
+                </div>
+                <div class="contact-section" data-animate>
+                    <div class="contact-card">
+                        <h3>订阅西安味道快报</h3>
+                        <p>输入邮箱获取每周精选美食行程、限量新品开售提醒以及本地美食资讯。</p>
+                        <form>
+                            <label class="sr-only" for="email">邮箱</label>
+                            <input id="email" type="email" placeholder="留下你的邮箱" style="width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(178, 38, 29, 0.25); margin: 16px 0; font-size: 1rem;" required>
+                            <button type="submit" class="btn-primary" style="border: none; width: 100%; justify-content: center;">订阅美食情报</button>
+                        </form>
+                    </div>
+                    <div class="contact-card">
+                        <h3>加入口碑共创</h3>
+                        <p>欢迎美食博主、摄影师、餐饮品牌与我们合作，共同呈现更立体的西安味道。</p>
+                        <ul style="list-style: none; margin-top: 16px; display: grid; gap: 12px; color: var(--color-muted);">
+                            <li><i class="fa-solid fa-envelope-open-text"></i> hello@xianflavor.com</li>
+                            <li><i class="fa-solid fa-weixin"></i> 微信公众号：西安美味指南</li>
+                            <li><i class="fa-solid fa-location-dot"></i> 地址：西安市碑林区粉巷 68 号</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-zh="西安景点指南" data-en="Xi'an Attractions Guide">西安景点指南</h3>
-                    <p data-zh="为您提供最全面的西安旅游信息" data-en="Providing you with the most comprehensive Xi'an travel information">
-                        为您提供最全面的西安旅游信息
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-zh="快速链接" data-en="Quick Links">快速链接</h3>
-                    <ul>
-                        <li><a href="#home" data-zh="首页" data-en="Home">首页</a></li>
-                        <li><a href="#attractions" data-zh="景点" data-en="Attractions">景点</a></li>
-                        <li><a href="food.html" data-zh="美食" data-en="Food">美食</a></li>
-                        <li><a href="news.html" data-zh="新闻" data-en="News">新闻</a></li>
-                        <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
-                        <li><a href="#contact" data-zh="联系" data-en="Contact">联系</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-zh="关注我们" data-en="Follow Us">关注我们</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-wechat"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
+        <div class="container footer-grid">
+            <div>
+                <h3>西安美味指南</h3>
+                <p>用味觉认识古城，用脚步丈量街巷。我们持续更新本地实测的美食攻略，只推荐真正好吃的选择。</p>
+            </div>
+            <div>
+                <h3>快速导航</h3>
+                <div class="footer-links">
+                    <a href="#signature">必吃清单</a>
+                    <a href="#routes">美食路线</a>
+                    <a href="food.html">西安美食大全</a>
+                    <a href="news.html">美食快讯</a>
+                    <a href="sitemap.html">网站地图</a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 西安景点指南. <span data-zh="保留所有权利" data-en="All rights reserved">保留所有权利</span></p>
+            <div>
+                <h3>关注我们</h3>
+                <div class="footer-links">
+                    <span><i class="fa-brands fa-weixin"></i> 微信号：xianfoodies</span>
+                    <span><i class="fa-brands fa-weibo"></i> 微博：@西安美味指南</span>
+                    <span><i class="fa-brands fa-x-twitter"></i> Twitter：@tasteofxian</span>
+                </div>
             </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 西安美味指南 · 重新定义你的西安美食之旅
         </div>
     </footer>
 
-    <!-- Modal for attraction details -->
-    <div id="attractionModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
